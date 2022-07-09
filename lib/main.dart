@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 import 'dart:io';
 import 'package:flutter/foundation.dart';
+import 'package:webview_flutter/webview_flutter.dart';
+import '../webview.dart';
+
+String site = " ";
 
 void main() {
   runApp(const MyApp());
@@ -71,6 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
     controller.scannedDataStream.listen((scanData) {
       setState(() {
         result = scanData;
+        site = result!.code!;
       });
     });
   }
