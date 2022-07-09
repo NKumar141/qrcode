@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           InkWell(
             onTap: () {
-              Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => MyApp()));
+              Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Web()));
             },
             child: Center(
               child: (result != null) ? Text('Barcode Type: ${describeEnum(result!.format)}   Data: ${result!.code}') : Text('Scan a code'),
