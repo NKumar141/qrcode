@@ -20,7 +20,7 @@ class Web extends StatelessWidget {
           ),
         ]),
         body: WebView(
-          initialUrl: site,
+          initialUrl: "www.google.com",
           javascriptMode: JavascriptMode.unrestricted,
         ),
       ),
